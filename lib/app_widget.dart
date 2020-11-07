@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ola_mundo/app_controller.dart';
 
-import 'desafio_page.dart';
-import 'home_page.dart';
-import 'login_page.dart';
-import 'todo_page.dart';
+import 'addtodo.dart';
+import 'app_controller.dart';
+import 'widgets/pages/home_page.dart';
+import 'widgets/pages/login_page.dart';
+import 'widgets/pages/todo_page.dart';
 
 class AppWidget extends StatelessWidget{
 
@@ -15,15 +15,15 @@ class AppWidget extends StatelessWidget{
       builder: (context, child) {
         return MaterialApp(
               theme: ThemeData(
-                primarySwatch: Colors.deepPurple,
+                primarySwatch: Colors.blue,
                 brightness: AppController.instance.isDartTheme ? Brightness.dark : Brightness.light
               ),
               initialRoute: '/',
               routes: {
                 '/': (context) => LoginPage(),
                 '/home': (context) => HomePage(),
-                '/desafio': (context) => DesafioPage(),
                 '/todo': (context) => TodoPage(),
+                '/addtodo': (context) => AddTodo(),
               },
             );
         },

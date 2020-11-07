@@ -1,7 +1,7 @@
 
-
 import 'package:flutter/material.dart';
-import 'package:ola_mundo/app_controller.dart';
+
+import '../../app_controller.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -40,19 +40,11 @@ class HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.explore),
-              title: Text('Challenge'),
-              subtitle: Text("Desafio Flutterando"),
-              onTap: (){
-                Navigator.of(context).pushReplacementNamed('/desafio');
-              },
-            ),
-            ListTile(
               leading: Icon(Icons.assignment),
               title: Text('To-Do'),
               subtitle: Text("To-Do List"),
               onTap: (){
-                Navigator.of(context).pushNamed('/todo');
+                Navigator.of(context).pushReplacementNamed('/todo');
               },
             ),
             ListTile(
@@ -83,31 +75,7 @@ class HomePageState extends State<HomePage> {
               Container(
                 height: 50,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 50,
-                    height: 50,
-                    color: Colors.black,
-                    
-                  ),
-                  Container(
-                    width: 50,
-                    height: 50,
-                    color: Colors.black,
-                    
-                  ),
-                  Container(
-                    width: 50,
-                    height: 50,
-                    color: Colors.black,
-                    
-                  ),
-                  
-                ],
-              )
+            
             ]
           ),
       ),
