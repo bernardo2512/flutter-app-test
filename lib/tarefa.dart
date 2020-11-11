@@ -1,13 +1,18 @@
 class Tarefa{
-  final int id;
-  final String descricao;
+    final String titulo;
+    final String descricao;
 
-  Tarefa({this.id,this.descricao});
+  Tarefa({
+    this.titulo,this.descricao
+    });
 
-  factory Tarefa.fromJson(Map<String,dynamic> json){
-    return Tarefa(
-      id:json['id'],
-      descricao: json['descricao']
-    );
-  }
+    get text{
+      return this.titulo;
+    }
+
+    get textDescricao {
+      return this.descricao;
+    }
+
+  
 }

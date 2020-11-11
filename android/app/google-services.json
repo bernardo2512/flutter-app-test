@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "258432954978",
+    "firebase_url": "https://db-todo.firebaseio.com",
+    "project_id": "db-todo",
+    "storage_bucket": "db-todo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258432954978:android:5735b0e2a88f60af31d73b",
+        "android_client_info": {
+          "package_name": "com.example.ola_mundo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258432954978-kecnsmi81i1s5qipcgrnhgvbeo1u1bfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9f38Gb02LNJC0r3dbK2vyCnsbIwKPIqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258432954978-kecnsmi81i1s5qipcgrnhgvbeo1u1bfv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

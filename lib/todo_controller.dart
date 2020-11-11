@@ -1,13 +1,15 @@
 
 import 'package:flutter/widgets.dart';
 
+import 'tarefa.dart';
+
 class TodoController extends ChangeNotifier {
 
   static TodoController instance = TodoController();
-  List<String> todoList = [];
+  List<Tarefa> todoList = [];
 
-  addTarefa(String tarefa){
-    this.todoList.add(tarefa);
+  addTarefa(String titulo, String desc){
+    this.todoList.add(Tarefa(titulo: titulo,descricao: desc));
   }
 
 

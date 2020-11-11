@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'todo_controller.dart';
 
 class AddTodo extends StatelessWidget {
-  final TextEditingController _controller = TextEditingController();
+  final TextEditingController _controllerTitulo = TextEditingController();
+  final TextEditingController _controllerDescricao = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +21,28 @@ class AddTodo extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller:_controller,
+                      controller:_controllerTitulo,
                       decoration: InputDecoration(
-                        labelText: 'To-Do',
+                        labelText: 'Titulo Tarefa',
+                        border: OutlineInputBorder()
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      controller:_controllerDescricao,
+                      decoration: InputDecoration(
+                        labelText: 'Descricao',
                         border: OutlineInputBorder()
                       ),
                     ),
                   ),
                   RaisedButton(
                     onPressed:(){
-                      TodoController.instance.addTarefa(_controller.text);
-                      _controller.clear();
+                      TodoController.instance.addTarefa(_controllerTitulo.text,_controllerDescricao.text);
+                      _controllerTitulo.clear();
+                      _controllerDescricao.clear();
                     },
                     child: Container(
                       child: Text('Adicionar Tarefa'),
